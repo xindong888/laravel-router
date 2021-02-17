@@ -1,4 +1,5 @@
 # laravel 万能路由库
+安装: composer require xindong888/laravel-router
 
 > 优点1. 自动匹配控制器
 >
