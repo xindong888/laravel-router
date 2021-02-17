@@ -1,10 +1,12 @@
 {
     "name": "xindong888/laravel-router",
     "type": "library",
-    "description": "The Laravel Framework.",
+    "description": "The Laravel Framework.Laravel Universal Routing.",
+    "version": "1.0",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "router"
     ],
     "license": "MIT",
     "require": {
