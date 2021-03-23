@@ -2,7 +2,7 @@
     "name": "xindong888/laravel-router",
     "type": "library",
     "description": "The Laravel Framework.Laravel Universal Routing.",
-    "version": "v1.2",
+    "version": "1.2.1",
     "keywords": [
         "framework",
         "laravel",
