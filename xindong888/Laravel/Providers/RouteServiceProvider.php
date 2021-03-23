@@ -64,10 +64,15 @@ class RouteServiceProvider extends ServiceProvider
             Route::any('/{model?}/{controller?}/{action?}/{params?}',
                 function ($module = 'home', $controller = 'index', $action = 'index', $params = '') use ($prefix) {
                     //获取控制的类路径
-                    $class = 'App\Http\Controllers\\' . $module . '\\' . ucfirst(strtolower($controller));
+                    $class = 'App\Http\Controllers\\' . $module . '\\' .ucfirst(strtolower($controller));
+                    $class1 = 'App\Http\Controllers\\' . $module . '\\' .ucfirst(strtolower($controller)).'Controller';
                     //判断是不是一个类
-                    if (class_exists($class)) {
-                        $controller = new $class();//实例化控制器类
+                    if (class_exists($class) || class_exists($class1)) {
+                        if(class_exists($class)){
+                            $controller = new $class();//实例化控制器类
+                        }else{
+                            $controller = new $class1();//实例化控制器类
+                        }
                         $p = explode('/', $params);//拆分参数
                         //获取控制器调度
                         $cd = app()->make(ControllerDispatcher::class);
